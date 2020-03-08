@@ -6,7 +6,7 @@ public class Address {
     private String numberHome;
     private String numberFlat;
 
-    Address(String street, String numberHome, String numberFlat) {
+    public Address(String street, String numberHome, String numberFlat) {
         this.street = street;
         this.numberHome = numberHome;
         this.numberFlat = numberFlat;

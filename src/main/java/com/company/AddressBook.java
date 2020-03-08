@@ -40,6 +40,9 @@ public class AddressBook {
         return null;
     }
 
+    /** Для двух нижестоящих методов решил возвращать хеш-мап. Думаю, что юзеру
+     * будет легче так оперировать данными.
+     */
     public HashMap<String, String> getPersonToStreet (String needStreet) {
         HashMap<String, String> result;
         result = new HashMap<>();
