@@ -48,6 +48,7 @@ public class AddressBook {
                 result.put(key, book.get(key).toString());
             }
         }
+        if (result.isEmpty()) return null;
         return result;
     }
 
@@ -55,10 +56,13 @@ public class AddressBook {
         HashMap<String, String> result;
         result = new HashMap<>();
         for (String key: book.keySet()){
-            if (book.get(key).getStreet().equals(needStreet) && book.get(key).getNumberHome().equals(needHome)) {
+            if (book.get(key).getStreet().equals(needStreet)) {
+                if (book.get(key).getNumberHome().equals(needHome)) {
                 result.put(key, book.get(key).toString());
+                }
             }
         }
+        if (result.isEmpty()) return null;
         return result;
     }
 }
